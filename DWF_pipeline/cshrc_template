@@ -1,0 +1,98 @@
+module load idl
+module load swarp/x86_64/gnu/2.38.0
+module load wcstools
+module load gcc
+
+module load ds9/x86_64
+
+module load heasoft/x86_64/gnu/6.16
+
+module load iraf/x86_64/2.16
+
+module load idl/8.4
+
+
+# module load cfitsio/x86_64 
+# module load cfitsio/x86_64/gnu/3.360
+# module load cfitsio/x86_64/gnu/3.370
+# module load ccfits
+
+
+
+module load cfitsio
+module load ccfits
+module load boost
+
+
+module load sextractor/x86_64
+
+module load astrometry.net
+
+#module load isis
+
+#module load starlink/x86_64   
+
+module load sublime_text/unknown
+
+module load anaconda/x86_64/2.2.0
+
+module load mpich2/x86_64/gnu/1.4.1p1
+
+
+
+
+setenv IDL_DIR /usr/local/itt/idl81
+setenv IDL_HELP_PATH $IDL_DIR/help
+# These IDL directories will likely differ for you...check with your system administrator.
+
+ setenv IDL_STARTUP /nfs/cluster/sn/iandreoni/idl/.idlstartup 
+
+# # clear the path.
+ setenv IDL_PATH
+# # add the base IDL library and examples to path.
+# setenv IDL_PATH $IDL_PATH{:}+/nfs/cluster/sn/iandreoni/idl/
+# setenv IDL_PATH $IDL_PATH{:}+/nfs/cluster/sn/iandreoni/idl/red/
+# setenv IDL_PATH $IDL_PATH{:}+$IDL_DIR/lib
+# setenv IDL_PATH $IDL_PATH{:}+$IDL_DIR/examples
+ setenv IDL_PATH $IDL_PATH{:}+/usr/local/itt/idl84/lib
+ setenv IDL_PATH $IDL_PATH{:}+/lustre/projects/p025_swin/iandreoni/idl/snphot/astrolib/pro
+ setenv IDL_PATH $IDL_PATH{:}+/lustre/projects/p025_swin/iandreoni/idl/snphot/astrolib/
+ 
+
+
+setenv LD_LIBRARY_PATH /nfs/cluster/sn/iandreoni/idl/installation/lib
+setenv LD_LIBRARY_PATH $LD_LIBRARY_PATH\:/usr/local/x86_64/gnu/gcc-4.7.1/lib
+setenv LD_LIBRARY_PATH $LD_LIBRARY_PATH\:/usr/local/python-2.7.2/lib
+setenv LD_LIBRARY_PATH $LD_LIBRARY_PATH\:/usr/local/x86_64/gnu/gcc-4.7.1/lib64
+setenv LD_LIBRARY_PATH $LD_LIBRARY_PATH\:/usr/local/x86_64/gnu/mpc-1.0/lib
+setenv LD_LIBRARY_PATH $LD_LIBRARY_PATH\:/usr/local/x86_64/gnu/mpfr-3.1.1/lib
+setenv LD_LIBRARY_PATH $LD_LIBRARY_PATH\:/usr/local/x86_64/gnu/gmp-5.0.5/lib
+setenv LD_LIBRARY_PATH $LD_LIBRARY_PATH\:/nfs/cluster/sn/iandreoni/idl/snphot/Fortran/lib
+setenv LD_LIBRARY_PATH $LD_LIBRARY_PATH\:/nfs/cluster/sn/iandreoni/idl/snphot/Fortran/cfitsio
+
+setenv PATH $PATH\:/mnt/cluster/sn/iandreoni/idl/snphot/Fortran/cfitsio
+setenv PATH $PATH\:/usr/local/x86_64/gnu/gcc-4.7.1/lib/
+setenv PATH $PATH\:/mnt/cluster/sn/iandreoni/idl/snphot/Fortran/cfitsio
+setenv PATH $PATH\:/usr/local/x86_64/gnu/gcc-4.7.1/libexec/gcc/x86_64-unknown-linux-gnu/4.7.1/f951
+setenv PATH $PATH\:/mnt/cluster/sn/iandreoni/idl/snphot/Fortran/bin
+setenv PATH $PATH\:/mnt/cluster/sn/iandreoni/idl/snphot/Fortran/lib
+setenv PATH $PATH\:/mnt/cluster/sn/iandreoni/idl/snphot/Fortran/bin/findisov
+setenv PATH $PATH\:/mnt/cluster/sn/iandreoni/idl/snphot/Fortran/bin/cjpphotv
+setenv PATH $PATH\:/mnt/cluster/sn/iandreoni/idl/snphot
+setenv PATH $PATH\:/mnt/cluster/sn/iandreoni/idl/snphot/ptf
+setenv PATH $PATH\:/lustre/projects/p025_swin/iandreoni/nedit/nedit-5.6/source
+setenv PATH $PATH\:/lustre/projects/p025_swin/iandreoni/eclipse/eclipse-5.0.0/bin
+
+# Armin's pipeline: PhotPipe
+source /lustre/projects/p025_swin/pipes/arest/photpipe/config/DECAM/DEFAULT/DEFAULT.sourceme
+
+#Mary and DWF data processing:
+source /lustre/projects/p025_swin/iandreoni/MARY2/sourceme_tcsh.txt 
+
+# JPEG2000 software
+setenv PATH $PATH\:/lustre/projects/p025_swin/dvohl/kerlumph_7_4_decam/bin/Linux-x86-64-gcc
+setenv LD_LIBRARY_PATH $LD_LIBRARY_PATH\:/lustre/projects/p025_swin/dvohl/kerlumph_7_4_decam/lib/Linux-x86-64-gcc
+
+setenv HOSTNAME g2.hpc.swin.edu.au
+
+setenv PROJECT_DIR\:/lustre/projects/p025_swin
