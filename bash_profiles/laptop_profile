@@ -1,0 +1,101 @@
+#set display
+#display variables are from:
+# http://dobsondev.com/2014/02/21/customizing-your-terminal/
+
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+
+
+# textmate shell support
+export EDITOR="/usr/local/bin/mate -w"
+
+
+alias ls='ls -GFh'
+alias ll='ls -l'
+
+
+function prompt {
+  local BLACK="\[\033[0;30m\]"
+  local BLACKBOLD="\[\033[1;30m\]"
+  local RED="\[\033[0;31m\]"
+  local REDBOLD="\[\033[1;31m\]"
+  local GREEN="\[\033[0;32m\]"
+  local GREENBOLD="\[\033[1;32m\]"
+  local YELLOW="\[\033[0;33m\]"
+  local YELLOWBOLD="\[\033[1;33m\]"
+  local BLUE="\[\033[0;34m\]"
+  local BLUEBOLD="\[\033[1;34m\]"
+  local PURPLE="\[\033[0;35m\]"
+  local PURPLEBOLD="\[\033[1;35m\]"
+  local CYAN="\[\033[0;36m\]"
+  local CYANBOLD="\[\033[1;36m\]"
+  local WHITE="\[\033[0;37m\]"
+  local WHITEBOLD="\[\033[1;37m\]"
+  local RESETCOLOR="\[\e[00m\]"
+
+  export PS1="\n$RED\u $PURPLE@ $GREEN\w $RESETCOLOR$GREENBOLD\$(git branch 2> /dev/null)\n $BLUE[\#] → $RESETCOLOR"
+  export PS2=" | → $RESETCOLOR"
+}
+
+prompt
+
+#jupyter notebook
+alias jp="jupyter notebook "
+
+
+#imgcatpath
+export PATH=$PATH:/Users/alex/mybin
+
+#run julia
+alias julia="exec '/Applications/Julia-0.4.5.app/Contents/Resources/julia/bin/julia'"
+
+#open IJulia notebook
+alias ijulia="ipython notebook --profile julia"
+
+#add path for custom Julia library
+export LOAD_PATH="/Users/alex/CODES/Julia_Custom_jl"
+
+
+
+#open LightTable
+alias light="exec '/Applications/LightTable/light'"
+
+
+#execute vpfit and rdgen
+alias vpfit="/Users/alex/CODES/10/vpfit"
+alias rdgen="/Users/alex/CODES/10/rdgen"
+
+
+#IDL_PATH
+alias idl="/Applications/exelis/idl82/bin/idl"
+alias DISPLAY="host_name:0.0"
+
+# added by Anaconda3 2.0.1 installer
+export PATH=$PATH:$HOME/CODES/plotspec/scripts
+export PATH=$PATH:$HOME/bin
+export PYTHONPATH=$/Users/alex/anaconda3
+
+
+
+#sync folders using the sync_list
+alias downg2="source /Users/alex/downg2"
+alias upg2="source /Users/alex/upg2"
+
+
+
+
+alias rm="rm -i"
+alias cp="cp -i"
+alias mv="mv -i"
+alias scp="scp -p"
+alias ssh="ssh -Y -C"
+
+alias ramon="ssh -X codorean@ramon-1.spa.umn.edu"
+alias sftpramon="sftp codorean@ramon-1.spa.umn.edu"
+
+alias g2='ssh -t -Y -C acodorea@g2.hpc.swin.edu.au  "cd /lustre/projects/p036_swin/alexc ; bash"'
+alias sftpg2="sftp acodorea@g2.hpc.swin.edu.au"
+
+
+
